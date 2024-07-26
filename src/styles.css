@@ -1,0 +1,397 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Blanco */
+    color: #000000; /* Negro */
+}
+
+header {
+    background-color: #ffffff; /* Blanco */
+    color: black;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: black; /* Letras negras */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px; /* Añadir padding inferior para espacio del subrayado */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active-link {
+    color: #666666; /* Gris oscuro para el hover y enlace activo */
+    border-bottom: 2px solid #000000; /* Subrayado negro para el enlace activo */
+}
+
+section {
+    padding: 40px 20px; /* Reducir el padding de las secciones */
+    text-align: center;
+}
+
+.divider {
+    width: 80%;
+    margin: 20px auto; /* Reducir el margen de las líneas divisorias */
+    border: none;
+    border-top: 2px solid #cacaca; /* Color de la línea */
+}
+
+section#hero {
+    background: url('./assets/hero-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 20px; /* Ajustar el padding para llevar el contenido más arriba */
+    display: flex;
+    align-items: center;
+    height: 80vh; /* Ajustar la altura */
+    position: relative; /* Asegurar que los elementos se posicionen dentro de este contenedor */
+}
+
+.hero-overlay {
+    background-color: white(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Aplicar desenfoque */
+    max-width: 600px; /* Limitar el ancho del contenido */
+    margin-left: 20px; /* Separar un poco del borde izquierdo */
+    text-align: left; /* Alinear texto a la izquierda */
+    position: absolute;
+    left: 20px; /* Ajustar posición a la izquierda */
+}
+
+.hero-content {
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+section#hero h1 {
+    font-size: 48px;
+    margin: 0 0 20px;
+}
+
+section#hero p {
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+
+.hero-link {
+    text-decoration: none; /* Eliminar el subrayado */
+}
+
+.hero-link button {
+    text-decoration: none; /* Asegurar que el botón no tenga subrayado */
+}
+
+.hero-button {
+    background-color: #000000; /* Negro */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Bajar el botón */
+    display: block; /* Asegurar que el botón sea un bloque */
+    width: fit-content; /* Ajustar el ancho al contenido */
+}
+
+.hero-button:hover {
+    background-color: #333333; /* Gris oscuro para el hover */
+}
+
+.reserve-button-container {
+    text-align: center;
+    margin: 20px 0; /* Reducir el margen para separar las secciones */
+}
+
+.reserve-button {
+    background-color: #000000; /* Negro */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reserve-button:hover {
+    background-color: #333333; /* Gris oscuro para el hover */
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #000000; /* Negro */
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666666; /* Gris oscuro */
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000000; /* Negro */
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #666666; /* Gris oscuro */
+}
+
+footer {
+    background-color: #000000; /* Negro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.social-icons,
+.contact-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a,
+.contact-social-icons a {
+    color: white; /* Asegurar que los iconos de redes sociales sean blancos */
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover,
+.contact-social-icons a:hover {
+    color: #ccc; /* Cambiar a gris claro en hover */
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 40px; /* Aumenta el margen desde la izquierda */
+    background-color: #000000; /* Fondo negro */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button img {
+    width: 35px;
+    height: 35px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white; /* Fondo claro para el formulario */
+    padding: 20px; /* Reducir padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto; /* Ajustar altura */
+}
+
+form label {
+    margin: 10px 0; /* Reducir margen */
+    width: 100%;
+    max-width: 500px;
+    color: #000000; /* Negro */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px; /* Reducir padding */
+    margin-top: 5px; /* Reducir margen */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    background-color: #f9f9f9; /* Fondo claro para los campos del formulario */
+    color: #333333; /* Gris oscuro */
+}
+
+form input:focus, form textarea:focus {
+    border-color: #000000; /* Negro */
+}
+
+form button {
+    background-color: #000000; /* Negro */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Añadir margen superior */
+}
+
+form button:hover {
+    background-color: #333333; /* Gris oscuro para el hover */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1 1 48%; /* Ajustar para tomar el 48% del ancho */
+}
+
+.contact-card {
+    flex: 1 1 48%; /* Ajustar para tomar el 48% del ancho */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: auto; /* Ajustar altura */
+}
+
+.contact-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-social-icons a {
+    color: #000000; /* Negro */
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.contact-social-icons a:hover {
+    color: #666666; /* Gris oscuro para el hover */
+}
+
+.contact-map {
+    margin-top: 40px;
+}
+
+.testimonials-carousel {
+    display: flex;
+    justify-content: center; /* Centramos el carrusel horizontalmente */
+    align-items: center; /* Centramos verticalmente los elementos dentro del carrusel */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.testimonials-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.testimonial-item {
+    background-color: white; /* Fondo claro para los elementos de testimonios */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    min-width: 300px;
+    max-width: 90%; /* Limitar el ancho máximo */
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Centrar cada elemento dentro del carrusel */
+}
+
+.testimonial-item img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-item blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    text-align: center; /* Centrar el texto del bloque de citas */
+}
+
+.testimonial-item cite {
+    font-size: 14px;
+    color: #666666; /* Gris oscuro */
+    text-align: center; /* Centrar el texto del citador */
+}
